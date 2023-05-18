@@ -7,5 +7,8 @@ module com.example.dbaccess {
     requires java.sql;
 
     opens com.example.dbaccess to javafx.fxml;
+    opens DBAccessUserManagementSystem to javafx.fxml;
+
     exports com.example.dbaccess;
+    exports DBAccessUserManagementSystem;
 }

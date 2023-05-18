@@ -7,14 +7,14 @@ public class Main {
         ProductService productService = new ProductService();
 
 
-        System.out.println("ID検索 :"+ productService.findById(-1));//IDが101のものを探す。
+        //System.out.println("ID検索 :"+ productService.findById(-1));//IDが101のものを探す。
 
         //ID検索 //投げられた例外を処理する。
-//        try {
-//            System.out.println("ID検索 :"+ productService.findById(10));//IDが101のものを探す。
-//        }catch(ProductNotFoundException e){
-//            System.out.println(e.getMessage());
-//        }
+        try {
+            System.out.println("ID検索 :"+ productService.findById(-1));//IDが101のものを探す。
+        }catch(ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
 
         //名前処理確認
         System.out.println("名前検索 :"+productService.findByName("地球"));
